@@ -1,0 +1,22 @@
+BUSINESS INFORMATION — REPLACE ALL EXAMPLE TEXT BEFORE GOING LIVE
+
+Business name: Example Hotel.
+
+Location: Example Hotel is located at [insert verified address].
+
+Check-in: [insert verified check-in time].
+Check-out: [insert verified check-out time].
+
+Rooms: [describe room types using verified website information].
+
+Breakfast: [state whether breakfast is included and any relevant conditions].
+
+Cancellation policy: [insert the exact, current policy or say customers
+should consult the reservation page].
+
+Reservations: Customers choose their dates, view availability, and complete
+their reservations on the hotel's website. The WhatsApp assistant cannot
+create, change, cancel, or confirm reservations.
+
+Contact: For questions not answered here, contact [insert your verified
+customer-service contact information].
