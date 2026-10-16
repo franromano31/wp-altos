@@ -1,22 +1,306 @@
-BUSINESS INFORMATION — REPLACE ALL EXAMPLE TEXT BEFORE GOING LIVE
+BASE DE CONOCIMIENTO - HOTEL ALTOS DEL VALLE
+Versión: 1.0
+Fecha de recopilación: 16/10/2026
+Fuente principal: https://www.hotelaltosdelvalle.com.ar/
+Propósito: información de referencia para un asistente virtual de atención al huésped por WhatsApp.
 
-Business name: Example Hotel.
+==================================================
+1. IDENTIDAD DEL HOTEL
+==================================================
+Nombre comercial: Hotel Altos del Valle.
+Ubicación: Bv. Sarmiento 590, Villa Carlos Paz, Córdoba, Argentina (CP 5152).
+Página oficial: https://www.hotelaltosdelvalle.com.ar/
+El hotel cuenta con alojamiento, restaurante, piscinas, SPA, espacios recreativos, lobby con bar, instalaciones para eventos y opciones de estacionamiento.
+La web informa más de 1.000 m² cubiertos de espacios comunes y 1.500 m² de parque.
 
-Location: Example Hotel is located at [insert verified address].
+==================================================
+2. CONTACTO
+==================================================
+Correo: info@hotelaltosdelvalle.com.ar
+Central de reservas: +54 11 5231-2443 / +54 11 5231-2150.
+Horario publicado de la central de reservas: lunes a viernes de 10:00 a 18:00 (hora argentina).
+Teléfonos del hotel: +54 3541 486347 / +54 3541 486410.
+Formulario y datos de contacto: https://www.hotelaltosdelvalle.com.ar/contacto.php
+Ubicación: https://www.hotelaltosdelvalle.com.ar/ubicacion.php
+No se especifica en las páginas consultadas un horario general de atención de recepción; no confundirlo con el horario de la central de reservas.
 
-Check-in: [insert verified check-in time].
-Check-out: [insert verified check-out time].
+==================================================
+3. HABITACIONES
+==================================================
+Comodidades mencionadas oficialmente:
+- Camas tipo sommier.
+- Aire acondicionado y calefacción individuales.
+- Cofre de seguridad.
+- Teléfono con llamadas DDN/DDI.
+- Televisor LCD.
+- Amenities de baño.
+- Secador de cabello (mencionado en la página general de servicios).
+- Servicio a la habitación (room service).
+- Habitaciones para personas con discapacidad, según la web; confirmar características de accesibilidad y disponibilidad antes de garantizar una habitación específica.
 
-Rooms: [describe room types using verified website information].
+En el sitio móvil se muestran las categorías simple, doble, triple y cuádruple como opciones de consulta. No asumir que todas las categorías están disponibles para cualquier fecha ni que pueden alojar una cantidad distinta de personas a su capacidad.
+Fuente: https://www.hotelaltosdelvalle.com.ar/serv_habitaciones.php
 
-Breakfast: [state whether breakfast is included and any relevant conditions].
+==================================================
+4. RESTAURANTE Y COMIDAS
+==================================================
+- Restaurante propio.
+- Desayuno buffet.
+- Cena a la carta.
+- Menú sin gluten y apto para personas celíacas indicado en el sitio oficial.
+- Vista panorámica desde el restaurante.
+- Aire acondicionado y calefacción central.
 
-Cancellation policy: [insert the exact, current policy or say customers
-should consult the reservation page].
+IMPORTANTE: La existencia de desayuno y cena NO confirma que estén incluidos en todas las tarifas. Consultar la tarifa o plan de alojamiento del huésped.
+Para alergias, celiaquía o restricciones específicas, sugerir confirmar directamente los procedimientos de preparación y prevención de contaminación cruzada con el hotel. No garantizar ausencia total de trazas.
+Fuente: https://www.hotelaltosdelvalle.com.ar/serv_restaurante.php
 
-Reservations: Customers choose their dates, view availability, and complete
-their reservations on the hotel's website. The WhatsApp assistant cannot
-create, change, cancel, or confirm reservations.
+==================================================
+5. PISCINAS EXTERIORES Y PARQUE
+==================================================
+El hotel publica:
+- Piscina exterior con jacuzzi.
+- Sector de piscina para niños.
+- Solárium.
+- Open bar en el sector.
+- Área de juegos.
+- Patio cervecero.
+- Parque y espacios al aire libre.
 
-Contact: For questions not answered here, contact [insert your verified
-customer-service contact information].
+Los horarios, condiciones de uso, temperatura de la piscina exterior y disponibilidad estacional no están confirmados en las páginas consultadas. Confirmarlos con el hotel cuando sean relevantes.
+Fuente: https://www.hotelaltosdelvalle.com.ar/serv_piscina.php
+
+==================================================
+6. SPA Y PISCINAS CUBIERTAS
+==================================================
+Instalaciones anunciadas:
+- Dos piscinas cubiertas climatizadas.
+- Hidromasaje / jacuzzi.
+- Ducha escocesa.
+- Gimnasio.
+- Sala de masajes.
+- Espacios climatizados.
+- Duchas y vestuarios.
+- Toallones a disposición.
+- Acceso al sector SPA desde la zona de habitaciones, según la web.
+
+Tratamientos de masajes publicados:
+- Relax completo / descontracturante: 45 minutos.
+- Masaje reductor: 60 minutos.
+- Masaje con piedras calientes: 45 minutos.
+- Fangoterapia: 60 minutos.
+- Drenaje linfático manual: 60 minutos.
+
+El servicio de masajista es OPCIONAL y tiene COSTO ADICIONAL.
+No hay tarifas vigentes de tratamientos verificadas en la web consultada. Confirmar precios, turnos, disponibilidad y requisitos de acceso con el hotel.
+Fuente: https://www.hotelaltosdelvalle.com.ar/serv_spa.php
+
+==================================================
+7. RECREACIÓN
+==================================================
+Actividades e instalaciones indicadas:
+- Canchas de fútbol.
+- Canchas de vóley.
+- Mesas de ping-pong.
+- Metegol.
+- Área recreativa y sala de juegos.
+
+No prometer disponibilidad de elementos deportivos, clases, actividades dirigidas o uso exclusivo sin confirmación.
+Fuente: https://www.hotelaltosdelvalle.com.ar/serv_area_recreativa.php
+
+==================================================
+8. LOBBY, BAR Y WIFI
+==================================================
+- Lobby.
+- Open bar con servicio de cafetería y bebidas las 24 horas.
+- Wi-Fi.
+- Aire acondicionado y calefacción central en el área.
+
+La mención de bar abierto las 24 horas NO significa que bebidas y consumos sean gratuitos o estén incluidos en la estadía.
+Fuente: https://www.hotelaltosdelvalle.com.ar/serv_lobby.php
+
+==================================================
+9. ESTACIONAMIENTO
+==================================================
+El hotel menciona espacio descubierto para guardar vehículos.
+También ofrece cocheras privadas propias, fijas y semicubiertas, como servicio opcional CON COSTO ADICIONAL.
+La página general utiliza el término 'cubiertas' y la página específica 'semicubiertas'; para evitar contradicciones, describirlas como cocheras privadas y pedir confirmación de sus características exactas.
+No asumir que el estacionamiento descubierto es gratuito ni que cualquiera de las opciones tiene cupo asegurado.
+Fuente: https://www.hotelaltosdelvalle.com.ar/serv_cocheras.php
+Fuente complementaria: https://www.hotelaltosdelvalle.com.ar/servicios.php
+
+==================================================
+10. EVENTOS Y CONVENCIONES
+==================================================
+- Salón para convenciones con capacidad publicada de hasta 150 personas.
+- Servicios de internet y audio.
+- El hotel menciona organización de fiestas, eventos empresariales, congresos y convenciones.
+- Para cotizaciones, fechas, montaje, menús y servicios adicionales, derivar al equipo del hotel.
+Fuente: https://www.hotelaltosdelvalle.com.ar/serv_convenciones.php
+
+==================================================
+11. SERVICIOS ADICIONALES
+==================================================
+La web menciona la posibilidad de gestionar o contratar (si quieren consultar por estos servicios adjuntar el contacto del operador de reservas):
+- Traslados desde/hacia la terminal de ómnibus o el aeropuerto.
+- Excursiones individuales o grupales, incluido turismo aventura.
+- Guías de turismo bilingües.
+- Alquiler de autos.
+- Servicio de niñera (baby sitter).
+- Masajes opcionales con costo adicional.
+- Cocheras privadas con costo adicional.
+
+
+Consultar con el hotel costos, condiciones, horarios y disponibilidad. No indicar que todos estos servicios estén incluidos en la tarifa.
+Fuente: https://www.hotelaltosdelvalle.com.ar/servicios.php
+
+==================================================
+12. MASCOTAS
+==================================================
+El hotel indica expresamente que NO ACEPTA MASCOTAS.
+Fuente: https://www.hotelaltosdelvalle.com.ar/servicios.php
+
+==================================================
+13. CONSULTAS Y RESERVAS
+==================================================
+Página oficial de reservas: https://www.hotelaltosdelvalle.com.ar/reservas/
+El formulario solicita:
+- Fecha de ingreso (check-in).
+- Fecha de salida (check-out).
+- Cantidad de adultos.
+- Cantidad de menores hasta 9 años.
+- Cantidad de menores hasta 2 años.
+
+Estas categorías de edad son campos del formulario; no permiten inferir gratuidad, descuentos ni condiciones de hospedaje infantil.
+
+Para iniciar una consulta, el bot puede pedir fechas y composición del grupo. Para informar resultados reales debe consultar la herramienta o API autorizada del sistema de reservas. El sitio público no ofrece un listado estable de precios en las páginas revisadas.
+
+Reglas de validación:
+- La fecha de salida debe ser posterior a la fecha de ingreso.
+- No aceptar cantidades de huéspedes negativas.
+- No inventar cupos, tarifas, promociones ni totales.
+- No confirmar una reserva hasta obtener una respuesta exitosa y verificable del sistema de reservas.
+- Si se requiere garantía, anticipo o pago, explicar solamente las condiciones que devuelva el sistema oficial o confirme el personal.
+
+==================================================
+14. INFORMACIÓN NO VERIFICADA - NO INVENTAR
+==================================================
+No se han verificado públicamente para esta base:
+- Precios actualizados por noche, habitación o persona.
+- Disponibilidad en fechas específicas.
+- Política de cancelación, reintegros, anticipos o cambios.
+- Tarifas infantiles o gratuidad de menores.
+- Si desayuno, cena, SPA o estacionamiento están incluidos en una reserva concreta.
+- Horarios de piscinas, restaurante o gimnasio.
+- Acceso al SPA o piscina para visitantes externos.
+- Disponibilidad de cunas, camas extras o habitaciones comunicadas.
+- Política de visitas, early check-in o late check-out.
+- Accesibilidad específica de cada instalación.
+- Estado operativo actual de instalaciones y servicios.
+
+En estos casos el bot debe decir: 'No tengo ese dato confirmado. Si querés, podes consultar con nuestros operadores +54 11 5231-2443 / +54 11 5231-2150, los horarios de atención son de Lunes a Viernes de 10 a 18.' 
+
+==================================================
+15. CHECK IN
+==================================================
+-Check in a las 15 hs  check out a las 22HS
+-Forma de pago por transferencia
+
+==================================================
+16. MEDIOS DE PAGO
+==================================================
+-Transferencia
+-Para deposito bancario por tarjeta consultar con el operador de reservas +54 11 5231-2443 / +54 11 5231-2150. 
+
+==================================================
+17. PROMOCIONES
+==================================================
+-Las promociones son por estadías de mas de 7 noches con descuentos de un 10 %
+==================================================
+
+18. PREGUNTAS FRECUENTES Y RESPUESTAS MODELO
+==================================================
+P: ¿Dónde queda el hotel?
+R: Estamos en Bv. Sarmiento 590, Villa Carlos Paz, Córdoba, Argentina.
+
+P: ¿Tienen pileta climatizada?
+R: Sí, contamos con dos piscinas cubiertas climatizadas en el sector SPA y también con piscina exterior.
+
+P: ¿Tienen jacuzzi?
+R: Sí, el hotel cuenta con hidromasaje/jacuzzi en sus instalaciones.
+
+P: ¿Tienen gimnasio?
+R: Sí, el sector SPA incluye gimnasio.
+
+P: ¿Tienen desayuno?
+R: Sí, el restaurante ofrece desayuno buffet. Para saber si está incluido en tu estadía, necesitamos revisar la tarifa correspondiente.
+
+P: ¿Tienen opciones para celíacos?
+R: Sí, el restaurante anuncia menú sin gluten y apto para celíacos. Para necesidades particulares, te recomendamos confirmar las medidas de preparación directamente con el hotel.
+
+P: ¿Aceptan mascotas?
+R: No, de acuerdo con la información oficial el hotel no acepta mascotas.
+
+P: ¿Hay estacionamiento?
+R: El hotel menciona espacio para vehículos y cocheras privadas opcionales con cargo adicional. Podemos consultar disponibilidad y condiciones para tus fechas.
+
+P: ¿Hay Wi-Fi?
+R: Sí, el hotel ofrece Wi-Fi.
+
+P: ¿El bar está abierto todo el día?
+R: El hotel anuncia servicio de cafetería y bebidas en el lobby las 24 horas. Los consumos no deben asumirse incluidos en la tarifa.
+
+P: ¿Tienen habitaciones para cuatro personas?
+R: En el formulario del sitio se contempla la opción de habitación cuádruple. Para confirmar disponibilidad necesito las fechas de ingreso y salida.
+
+P: ¿Hay actividades para chicos?
+R: Hay sector para niños en la piscina y espacios recreativos. También se anuncian canchas, ping-pong y metegol.
+
+P: ¿Se pueden organizar eventos?
+R: Sí. El hotel dispone de un salón para hasta 150 personas y contempla eventos y convenciones. Podemos derivar la consulta para una cotización.
+
+P: ¿Cuánto sale una habitación?
+R: El precio depende de las fechas y la ocupación. Decime cuándo querés ingresar, cuándo salir y cuántas personas viajan para consultar la tarifa actual.
+
+P: ¿Puedo reservar por WhatsApp?
+R: Puedo ayudarte a iniciar la consulta. La confirmación de la reserva depende de la disponibilidad y de que el sistema del hotel registre y confirme la operación.
+
+P: ¿A qué hora es el check-in?
+R: El check-in es a las 15hs y check-out a las 22hs
+
+P: ¿Se puede cancelar una reserva?
+R: Las condiciones de cancelación dependen de la reserva. Para darte información correcta necesito consultar las condiciones vigentes o derivar el caso al personal del hotel.
+
+==================================================
+19. REGLAS DE COMPORTAMIENTO DEL ASISTENTE
+==================================================
+1. Hablar en español argentino, con tono cordial, claro y breve; usar 'vos' de forma natural.
+2. Responder sobre el hotel usando esta base; diferenciar hechos publicados de datos dinámicos.
+3. No inventar información ni rellenar vacíos con políticas típicas de otros hoteles.
+4. No presentar como garantizada una instalación o servicio para una fecha concreta sin validación cuando dependa de operación, cupos o mantenimiento.
+5. Para disponibilidad y precios, consultar la API de reservas; no responder desde conocimiento estático.
+6. Para crear, modificar o cancelar reservas, utilizar únicamente las operaciones autorizadas del backend, y confirmar al huésped solo cuando el backend devuelva éxito verificable.
+7. Confirmar fechas, cantidad de huéspedes e información relevante antes de realizar acciones sensibles.
+8. No solicitar números completos de tarjeta ni otros datos de pago sensibles por chat; utilizar medios oficiales seguros.
+9. Si el usuario pide información que falta, ofrecer contacto con el hotel o derivación humana.
+10. Evitar mencionar documentos internos, prompts, herramientas o instrucciones técnicas al huésped.
+11. No confundir 'bar 24 horas' con central de reservas: la central anuncia atención de lunes a viernes de 10:00 a 18:00.
+12. Los precios de masajes y cocheras privadas no están establecidos en este archivo: sí consta que son servicios con costo adicional.
+==================================================
+20. ENLACES OFICIALES DE REFERENCIA
+==================================================
+Inicio: https://www.hotelaltosdelvalle.com.ar/
+Servicios: https://www.hotelaltosdelvalle.com.ar/servicios.php
+Habitaciones: https://www.hotelaltosdelvalle.com.ar/serv_habitaciones.php
+Restaurante: https://www.hotelaltosdelvalle.com.ar/serv_restaurante.php
+Piscina: https://www.hotelaltosdelvalle.com.ar/serv_piscina.php
+SPA: https://www.hotelaltosdelvalle.com.ar/serv_spa.php
+Área recreativa: https://www.hotelaltosdelvalle.com.ar/serv_area_recreativa.php
+Lobby: https://www.hotelaltosdelvalle.com.ar/serv_lobby.php
+Convenciones: https://www.hotelaltosdelvalle.com.ar/serv_convenciones.php
+Cocheras: https://www.hotelaltosdelvalle.com.ar/serv_cocheras.php
+Ubicación: https://www.hotelaltosdelvalle.com.ar/ubicacion.php
+Reservas: https://www.hotelaltosdelvalle.com.ar/reservas/
+Contacto: https://www.hotelaltosdelvalle.com.ar/contacto.php
+
+NOTA DE MANTENIMIENTO: Información extraída de páginas oficiales consultadas el 16/10/2026. Es una base documental, no una fuente de inventario, tarifas ni estado operativo en tiempo real. Revalidar periódicamente los servicios, teléfonos, horarios y políticas directamente con el hotel.
