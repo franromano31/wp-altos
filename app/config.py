@@ -8,6 +8,9 @@ class Settings(BaseSettings):
     whatsapp_phone_number_id: str
     meta_graph_api_version: str = "v23.0"
 
+    database_url: str
+    postgres_password: str
+
     openai_api_key: str
     openai_model: str = "gpt-4o-mini"
 
