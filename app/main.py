@@ -1,10 +1,6 @@
-
-import asyncio
 import hashlib
 import hmac
 import logging
-import time
-from collections import OrderedDict
 from pathlib import Path
 
 import httpx
@@ -13,6 +9,13 @@ from fastapi.responses import PlainTextResponse
 from openai import AsyncOpenAI, APIError, RateLimitError
 
 from app.config import settings
+
+from app.message_repository import (
+    save_message,
+    mark_processing,
+    save_response,
+    finish_message,
+)
 
 
 # CONFIGURACION
@@ -31,45 +34,8 @@ KNOWLEDGE_FILE = (
 )
 
 
-# CONTROL DE MENSAJES DUPLICADOS
-processed_messages = OrderedDict()
-processing_messages = set()
-message_lock = asyncio.Lock()
-
 MESSAGE_TTL = 3600
 MAX_MESSAGES = 1000
-
-
-async def start_processing(message_id: str) -> bool:
-    async with message_lock:
-        now = time.monotonic()
-
-        # Eliminar mensajes vencidos
-        for msg_id, timestamp in list(processed_messages.items()):
-            if now - timestamp >= MESSAGE_TTL:
-                del processed_messages[msg_id]
-
-        # Ignorar mensajes ya procesados o en procesamiento
-        if (
-            message_id in processed_messages
-            or message_id in processing_messages
-        ):
-            return False
-
-        processing_messages.add(message_id)
-        return True
-
-
-async def finish_processing(message_id: str, success: bool):
-    async with message_lock:
-        processing_messages.discard(message_id)
-
-        if success:
-            processed_messages[message_id] = time.monotonic()
-
-            # Limitar uso de memoria
-            while len(processed_messages) > MAX_MESSAGES:
-                processed_messages.popitem(last=False)
 
 
 # GENERAR RESPUESTA CON OPENAI
@@ -223,12 +189,11 @@ async def receive_message(request: Request):
             detail="Invalid JSON",
         )
 
-    # Recorrer eventos recibidos
+    # RECORRER EVENTOS
     for entry in data.get("entry", []):
         for change in entry.get("changes", []):
             value = change.get("value", {})
 
-            # Procesar solo eventos del numero configurado
             if (
                 value.get("metadata", {}).get("phone_number_id")
                 != settings.whatsapp_phone_number_id
@@ -236,90 +201,62 @@ async def receive_message(request: Request):
                 continue
 
             for message in value.get("messages", []):
-
-                # Solo procesar mensajes de texto
                 if message.get("type") != "text":
                     continue
 
                 message_id = message.get("id")
                 phone = message.get("from")
-                text = (
-                    message.get("text", {})
-                    .get("body", "")
-                    .strip()
-                )
+                text = message.get("text", {}).get("body", "").strip()
 
                 if not message_id or not phone or not text:
                     continue
 
-                logger.info(
-                    "Mensaje recibido: id=%s, telefono=%s",
-                    message_id,
-                    phone,
-                )
-
-                # Evitar duplicados
-                if not await start_processing(message_id):
-                    logger.info(
-                        "Mensaje duplicado ignorado: %s",
-                        message_id,
+                # Guardar el mensaje y detectar duplicados
+                try:
+                    is_new = await save_message(message_id, phone, text)
+                except Exception:
+                    logger.exception("Error guardando mensaje en PostgreSQL")
+                    raise HTTPException(
+                        status_code=503,
+                        detail="Database unavailable",
                     )
+
+                if not is_new:
+                    logger.info("Mensaje duplicado: %s", message_id)
                     continue
 
-                success = False
-
                 try:
-                    # Consultar OpenAI
+                    await mark_processing(message_id)
+
+                    # Generar respuesta con OpenAI
                     answer = await generate_answer(text)
 
-                    # Responder por WhatsApp
+                    # Guardar respuesta antes de enviarla
+                    await save_response(message_id, answer)
+
+                    # Enviar respuesta por WhatsApp
                     await send_message(phone, answer)
 
-                    success = True
+                    await finish_message(message_id, "sent")
 
-                    logger.info(
-                        "Mensaje respondido correctamente: %s",
-                        message_id,
-                    )
-
-                except RateLimitError as e:
-                    logger.error(
-                        "OpenAI sin cuota o rate limit: %s",
-                        e,
-                    )
-
-                except APIError as e:
-                    logger.error(
-                        "Error de OpenAI: %s",
-                        e,
-                    )
-
-                except httpx.HTTPStatusError as e:
-                    logger.error(
-                        "Error enviando mensaje a WhatsApp: %s",
-                        e.response.text,
-                    )
-
-                except httpx.RequestError as e:
-                    logger.error(
-                        "Error de conexion con WhatsApp: %s",
-                        e,
-                    )
+                    logger.info("Mensaje enviado: %s", message_id)
 
                 except Exception:
                     logger.exception(
-                        "Error inesperado procesando mensaje %s",
+                        "Error procesando mensaje: %s",
                         message_id,
                     )
 
-                finally:
-                    await finish_processing(
-                        message_id,
-                        success,
-                    )
+                    try:
+                        await finish_message(message_id, "failed")
+                    except Exception:
+                        logger.exception(
+                            "No se pudo actualizar el estado: %s",
+                            message_id,
+                        )
 
-    # Confirmar recepcion del webhook
     return {"status": "ok"}
+
 
 
 # HEALTH CHECK
