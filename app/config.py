@@ -1,4 +1,5 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import field_validator
 
 
 class Settings(BaseSettings):
@@ -9,6 +10,17 @@ class Settings(BaseSettings):
     meta_graph_api_version: str = "v23.0"
 
     database_url: str
+    @field_validator("database_url")
+    @classmethod
+    def normalize_database_url(cls, value: str) -> str:
+        if value.startswith("postgresql://"):
+            return value.replace(
+                "postgresql://",
+                "postgresql+asyncpg://",
+                1,
+            )
+        return value
+
     postgres_password: str
 
     openai_api_key: str
