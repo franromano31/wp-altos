@@ -8,6 +8,7 @@ from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import PlainTextResponse
 from openai import AsyncOpenAI, APIError, RateLimitError
 
+from app.message_repository import get_conversation_history
 from app.config import settings
 
 from app.message_repository import (
@@ -39,8 +40,9 @@ MAX_MESSAGES = 1000
 
 
 # GENERAR RESPUESTA CON OPENAI
-async def generate_answer(message: str) -> str:
+async def generate_answer(phone: str, message: str) -> str:
     knowledge = KNOWLEDGE_FILE.read_text(encoding="utf-8")
+    history = await get_conversation_history(phone)
 
     response = await ai.chat.completions.create(
         model=settings.openai_model,
@@ -72,9 +74,10 @@ async def generate_answer(message: str) -> str:
                     "7. No repitas enlaces ni incluyas enlaces diferentes "
                     "cuando exista uno específico para la consulta.\n\n"
 
-                    f"BASE DE CONOCIMIENTO:\n{knowledge}"
+                    f"\n\nBASE DE CONOCIMIENTO:\n{knowledge}"
                 ),
             },
+            *history,
             {
                 "role": "user",
                 "content": message,
@@ -229,7 +232,7 @@ async def receive_message(request: Request):
                     await mark_processing(message_id)
 
                     # Generar respuesta con OpenAI
-                    answer = await generate_answer(text)
+                    answer = await generate_answer(phone, text)
 
                     # Guardar respuesta antes de enviarla
                     await save_response(message_id, answer)
