@@ -163,6 +163,7 @@ Fuente: https://www.hotelaltosdelvalle.com.ar/servicios.php
 ==================================================
 13. CONSULTAS Y RESERVAS
 ==================================================
+Se puede reservar por telefono, se puede comunicar directamente con el telefono del hotel o con la central de reservas.
 Página oficial de reservas: https://www.hotelaltosdelvalle.com.ar/reservas/
 El formulario solicita:
 - Fecha de ingreso (check-in).
@@ -173,7 +174,7 @@ El formulario solicita:
 
 Estas categorías de edad son campos del formulario; no permiten inferir gratuidad, descuentos ni condiciones de hospedaje infantil.
 
-Para iniciar una consulta, el bot puede pedir fechas y composición del grupo. Para informar resultados reales debe consultar la herramienta o API autorizada del sistema de reservas. El sitio público no ofrece un listado estable de precios en las páginas revisadas.
+Para informar resultados reales debe consultar la herramienta o API autorizada del sistema de reservas. El sitio público no ofrece un listado estable de precios en las páginas revisadas.
 
 Reglas de validación:
 - La fecha de salida debe ser posterior a la fecha de ingreso.
@@ -203,14 +204,13 @@ En estos casos el bot debe decir: 'No tengo ese dato confirmado. Si querés, pod
 ==================================================
 15. CHECK IN
 ==================================================
--Check in a las 15 hs  check out a las 22HS
--Forma de pago por transferencia
+-Check in a las 15 hs  check out a las 10 am
 
 ==================================================
 16. MEDIOS DE PAGO
 ==================================================
 -Transferencia
--Para deposito bancario por tarjeta consultar con el operador de reservas +54 11 5231-2443 / +54 11 5231-2150. 
+-Para deposito bancario por tarjeta, mercado pago u otra billetera virtual consultar con el operador de reservas +54 11 5231-2443 / +54 11 5231-2150. 
 
 ==================================================
 17. PROMOCIONES
@@ -236,7 +236,7 @@ P: ¿Tienen desayuno?
 R: Sí, el restaurante ofrece desayuno buffet. Para saber si está incluido en tu estadía, necesitamos revisar la tarifa correspondiente.
 
 P: ¿Tienen opciones para celíacos?
-R: Sí, el restaurante anuncia menú sin gluten y apto para celíacos. Para necesidades particulares, te recomendamos confirmar las medidas de preparación directamente con el hotel.
+R: Sí, el restaurante anuncia menú sin gluten y apto para celíacos.
 
 P: ¿Aceptan mascotas?
 R: No, de acuerdo con la información oficial el hotel no acepta mascotas.
@@ -263,7 +263,7 @@ P: ¿Cuánto sale una habitación?
 R: El precio depende de las fechas y la ocupación. Decime cuándo querés ingresar, cuándo salir y cuántas personas viajan para consultar la tarifa actual.
 
 P: ¿Puedo reservar por WhatsApp?
-R: Puedo ayudarte a iniciar la consulta. La confirmación de la reserva depende de la disponibilidad y de que el sistema del hotel registre y confirme la operación.
+R: Para reservar por teléfono podes comunicarte directamente con el hotel o con la central de reservas.
 
 P: ¿A qué hora es el check-in?
 R: El check-in es a las 15hs y check-out a las 22hs
