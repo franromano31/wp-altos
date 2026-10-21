@@ -11,6 +11,9 @@ from openai import AsyncOpenAI, APIError, RateLimitError
 from app.message_repository import get_conversation_history
 from app.config import settings
 
+from pathlib import Path
+from fastapi.responses import HTMLResponse
+
 from app.message_repository import (
     save_message,
     mark_processing,
@@ -266,3 +269,13 @@ async def receive_message(request: Request):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+# PRIVACY HTML
+@app.get("/privacy", response_class=HTMLResponse)
+async def privacy_policy():
+    file_path = Path(__file__).with_name("privacy.html")
+    return HTMLResponse(
+        content=file_path.read_text(encoding="utf-8")
+    )
+
